@@ -12,14 +12,15 @@
         <div class="container">
             <nav>
                 <img src="images/logo.png" class="logo">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="#">Portfolio</a></li>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="#">Contact</a></li>
-
+                    <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
                 </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
                 <p>Student</p>
@@ -79,21 +80,57 @@
         <h1 class="sub-title">My Projects</h1>
         <div class="projects-list">
             <div>
+                <i class="fa-solid fa-robot"></i>
                 <h2>Project 1</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
-                <a href="#">learn more</a>
+                <a href="#">Learn more</a>
             </div>
             <div>
+                <i class="fa-solid fa-computer"></i>
                 <h2>Project 2</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
-                <a href="#">learn more</a>
+                <a href="#">Learn more</a>
             </div>
             <div>
+                <i class="fa-solid fa-floppy-disk"></i>
                 <h2>Project 3</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
-                <a href="#">learn more</a>
+                <a href="#">Learn more</a>
             </div>
         </div>
+    </div>
+</div>
+
+<div id="portfolio">
+    <div class="container">
+        <h1 class="subtitle">My Projects</h1>
+        <div class="project-list">
+            <div class="project">
+                <img src="images/work-1.png" alt="">
+                <div class="layer">
+                    <h3>Social Media App</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="project">
+                <img src="images/work-2.png" alt="">
+                <div class="layer">
+                    <h3>thing 2</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="project">
+                <img src="images/work-3.png" alt="">
+                <div class="layer">
+                    <h3>thing 3</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See more</a>
     </div>
 </div>
 
@@ -112,6 +149,17 @@
 
         event.currentTarget.classList.add("active-link");
         document.getElementById(tabname).classList.add("active-tab");
+
+    }
+
+    var sidemeu = doc.getElementById("sidemenu")
+
+    function openmenu(){
+        sidemeu.stylesheet.right = "0";
+    }
+
+    function closemenu(){
+        sidemeu.style.right = "-200px";
     }
 
 </script>
