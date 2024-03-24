@@ -66,9 +66,36 @@ nav ul li a:hover::after{
     width: 100%;
 }
 
+@keyframes text-animated{
+    from{
+        transform: translateX(0);
+    }
+
+    to{
+        transform: translateY(-1000%);
+    }
+}
+
+@keyframes intro-text-animated{
+    from{
+        transform: translateX(0);
+    }
+
+    to{
+        transform: translateY(-1500%);
+    }
+}
+
 .header-text{
     margin-top: 20%;
     font-size: 30px;
+    animation: text-animated ease-in-out;
+    animation-timeline: scroll(root block);
+}
+
+.intro-text{
+    animation: intro-text-animated ease-in-out;
+    animation-timeline: scroll(root block);
 }
 
 .header-text h1{
@@ -78,6 +105,11 @@ nav ul li a:hover::after{
 
 .header-text h1 span{
     color: #ff004f;
+    transition: color 0.5s;
+}
+
+.header-text h1 span:hover{
+    color: #770026
 }
 
 #about{
@@ -91,8 +123,40 @@ nav ul li a:hover::after{
     flex-wrap: wrap;
 }
 
+@keyframes about-image-animated{
+    0%{
+        transform: translateX(-200%);
+    }
+
+    25%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes about-subtitle-animated{
+    0%{
+        transform: translateX(200%);
+    }
+
+    24%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes about-content-animated{
+    0%{
+        transform: translateX(200%);
+    }
+
+    25%{
+        transform: translateX(0);
+    }
+}
+
 .about-col-1{
     flex-basis: 35%;
+    animation: about-image-animated ease-in-out;
+    animation-timeline: scroll(root block);
 }
 
 .about-col-1 img{
@@ -108,6 +172,13 @@ nav ul li a:hover::after{
     font-size: 60px;
     font-weight: 600;
     color: #fff;
+    animation: about-subtitle-animated ease-in-out;
+    animation-timeline: scroll(root block);
+}
+
+.content{
+    animation: about-content-animated ease-in-out;
+    animation-timeline: scroll(root block);
 }
 
 .tab-titles{
