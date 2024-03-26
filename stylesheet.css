@@ -505,7 +505,7 @@ nav ul li a:hover::after{
 .pdf embed{
     position:absolute;
     transform: translateX(25vw);
-
+    
 }
 
 
