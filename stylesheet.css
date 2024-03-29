@@ -411,29 +411,6 @@ nav ul li a:hover::after{
     }
 }
 
-/* .carousel.next .thumbnail .item:nth-last-child(1){
-    overflow: hidden;
-    animation: showThumbnail .4s linear 1 forwards;
-}
-.carousel.prev .list .item img{
-    z-index: 100;
-}
-@keyframes showThumbnail{
-    from{
-        width: 0;
-        opacity: 0;
-    }
-}
-.carousel.next .thumbnail{
-    animation: effectNext .4s linear 1 forwards;
-}
-
-@keyframes effectNext{
-    from{
-        transform: translateX(150px);
-    }
-} */
-
 .carousel .time{
     position: absolute;
     z-index: 1000;
@@ -520,9 +497,9 @@ nav .fa-solid{
 }
 
 @media only screen and (max-width: 600px){
-    #header{
+    /* #header{
         background-image: url(images/phone-background.png);
-    }
+    } */
 
     .header-text{
         margin-top: 100%;
