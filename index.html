@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Darren Liu</title>
+    <link rel="icon" href="images/favicon.ico">
     <link rel="stylesheet" href="stylesheet.css">
     <script src="https://kit.fontawesome.com/97cf9e871b.js" crossorigin="anonymous"></script>
 </head>
@@ -15,8 +16,8 @@
                 <ul id="sidemenu">
                     <li><a href="#header">Home</a></li>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#carousel">Projects</a></li>
+                    <li><a href="#resume">Portfolio</a></li>
                     <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
                 </ul>
                 <i class="fa-solid fa-bars" onclick="openmenu()"></i>
@@ -73,17 +74,17 @@
         </div>
     </div>
 
-    <div class="carousel">
+    <div id="carousel">
         <div class="list">
             <div class="item">
-                <img src="images/slide4temp.jpg" alt="">
+                <img src="images/slide4.png" alt="">
                 <div class="content">
-                    <div class="author">darren</div>
-                    <div class="title">PROJECT 4</div>
-                    <div class="topic">DATE</div>
-                    <div class="des">hello this project was dwadasf eret sarg arg ar gaaaaaaaaaaaaaaaaaaaaaaaaa a aa aaaaaaa</div>
+                    <div class="author">PROJECT 4</div>
+                    <div class="title">GARBAGE BAIN</div>
+                    <div class="topic">2023</div>
+                    <div class="des">Made for TurtleHacks, our project utilized computer vision and a resourcefully placed arduino motor to sort recyclable and non-recyclable waste into the correct bins</div>
                     <div class="buttons">
-                        <button>Find out more!</button>
+                        <button onclick="window.open('https://devpost.com/software/bubble-sort-qzaocp', '_blank')">Find out more!</button>
                     </div>
                 </div>
             </div>
@@ -94,7 +95,7 @@
                     <div class="title">FRC</div>
                     <div class="topic">2024</div>
                     <div class="des">
-                        The robot we built in 2024, named “toothless”, features a tank drivetrain, an arm, a dual-purpose shooter and intake designed to pick up foam rings, and a beefy climber. As a programmer, one of the biggest challenges in programming a robot comes from creating different subsystems and integrating them all to make the driving experience as smooth as possible. Something new we did this year was experimenting with a vision model, triangulating the position of the robot using multiple April tags and adjusting the arm height to shoot the pieces at the correct trajectory according to our robot’s distance from the goal.
+                        The robot we built in 2024, named “toothless”, features a tank drivetrain, an arm, a dual-purpose shooter and intake, and a climber. As a programmer I worked on creating different subsystems and integrating them all to make the driving and autonomous as smooth as possible. Something new we did this year was leveraging a vision model, triangulating the position of the robot using multiple April tags and adjusting the arm height to shoot the pieces at the correct trajectory according to our robot’s distance from the goal.
                     </div>
                     <div class="buttons">
                         <button onclick="window.open('https://www.youtube.com/watch?v=rdxCbdC1-6g', '_blank')">Find out more!</button>
@@ -109,7 +110,7 @@
                     <div class="title">FRC</div>
                     <div class="topic">2023</div>
                     <div class="des">
-                        The robot we built in 2023, named “fireduck” features a tank drivetrain, a telescoping arm, meaning it can rotate and extend, and a shooter/intake designed to pick up both cones and cubes. Being a part of the programming subdivision, I helped with forming the command/subsystem-based structure of the code and bringing real-world physics and math to the robot to make it smart. Did you know - the feedforward power the motor applies to the arm scales with cosine? Additionally, the power will change based on how far out the arm is extended.
+                        The robot we built in 2023, named “fireduck” features a tank drivetrain, a telescoping arm, meaning it can rotate and extend, and a shooter/intake designed to pick up both cones and cubes. The programming utilized PDI feedback loops and arm feedforward to ensure all movements ran smoothly.
                     </div>
                     <div class="buttons">
                         <button>Find out more!</button>
@@ -121,9 +122,9 @@
                 <img src="images/slide3.png" alt="">
                 <div class="content-2">
                     <div class="author">PROJECT 3</div>
-                    <div class="title">Botanical Bestie</div>
+                    <div class="title">BOTANICAL BESTIE</div>
                     <div class="topic">2023</div>
-                    <div class="des">Made for HackTheValley 8, our project, dubbed “botanical bestie” was a flower pot meant to bring your plants to life. Based on readings from various sensors such as a soil moisture sensor, light sensor, humidity sensor, and temperature sensor, our plant would talk to its owner and ask to be cared for when its stats were low! The pot featured an LCD and 8x8 LED matrix that displayed its stats and a camera to know when people were near!</div>
+                    <div class="des">Made for HackTheValley 8, our project, dubbed “botanical bestie” was a flower pot meant to bring your plants to life. Based on readings from various sensors such as soil moisture, humidity, and light, our plant would talk to its owner and ask to be cared for when its stats were low! The pot featured an LCD and 8x8 LED matrix that displayed its stats and a camera to know when people were near!</div>
                     <div class="buttons">
                         <button onclick="window.open('https://devpost.com/software/peculair-pet', '_blank')">Find out more!</button>
                     </div>
@@ -136,7 +137,7 @@
         </div>
     </div>
 
-    <div class="resume">
+    <div id="resume">
         <div class="subtitle" onclick="window.open('Resume.pdf')">My Resume:</div>
         <div class="pdf">
             <embed src="Resume.pdf" width="1000px" height="1200px"/>

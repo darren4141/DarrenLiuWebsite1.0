@@ -3,10 +3,13 @@
     padding: 0;
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
+    scroll-behavior: smooth;
+
 }
 
 :root{
     --main-color: #1e90ff;
+    --main-color-dark: #165da3;
 }
 
 html{
@@ -16,6 +19,8 @@ html{
 body{
     background: #080808;
     color: #fff;
+    scroll-behavior: smooth;
+
 }
 
 #header{
@@ -113,7 +118,7 @@ nav ul li a:hover::after{
 }
 
 .header-text h1 span:hover{
-    color: #770026
+    color: var(--main-color-dark)
 }
 
 .social-icons{
@@ -238,7 +243,7 @@ nav ul li a:hover::after{
 }
 
 .tab-contents ul li span{
-    color: #b54769;
+    color: var(--main-color-dark);
     font-size: 14px;
 }
 
@@ -250,25 +255,25 @@ nav ul li a:hover::after{
     display: block;
 }
 
-.carousel{
+#carousel{
     width: 100vw;
     height: 100vh;
     overflow: hidden;
     position: relative;
 }
 
-.carousel .list .item{
+#carousel .list .item{
     position: absolute;
     inset: 0 0 0 0;
 }
 
-.carousel .list .item img{
+#carousel .list .item img{
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.carousel .list .item .content{
+#carousel .list .item .content{
     position: absolute;
     top: 20%;
     max-width: 80%;
@@ -280,7 +285,7 @@ nav ul li a:hover::after{
     text-shadow: 0 5px 10px #0004;
 }
 
-.carousel .list .item .content-2{
+#carousel .list .item .content-2{
     position: absolute;
     top: 20%;
     max-width: 80%;
@@ -292,35 +297,46 @@ nav ul li a:hover::after{
     text-shadow: 0 5px 10px #0004;
 }
 
-.carousel .list .item .content .author,
-.carousel .list .item .content-2 .author{
+#carousel .list .item .content .author,
+#carousel .list .item .content-2 .author{
     font-weight: bold;
-    letter-spacing: 10px;
+    letter-spacing: 5px;
+    color: var(--main-color);
+
 }
 
-.carousel .list .item .content .title,
-.carousel .list .item .content-2 .title,
-.carousel .list .item .content .topic,
-.carousel .list .item .content-2 .topic{
+#carousel .list .item .content .title,
+#carousel .list .item .content-2 .title,
+#carousel .list .item .content .topic,
+#carousel .list .item .content-2 .topic{
     font-weight: bold;
     font-size: 5em;
     list-style: 1.3em;
+    
 }
 
-.carousel .list .item .content .buttons,
-.carousel .list .item .content-2 .buttons{
+#carousel .list .item .content .buttons,
+#carousel .list .item .content-2 .buttons{
     display: grid;
     margin-top: 20px;
 }
 
-.carousel .list .item .content button,
-.carousel .list .item .content-2 button{
-    letter-spacing: 3px;
-    font-weight: 500;
-    background-color: transparent;
-    color: #fff;
+#carousel .list .item .content button,
+#carousel .list .item .content-2 button{
+    letter-spacing: 1px;
+    font-weight: 550;
+    font-size: large;
+    background-color: rgba(78, 78, 78, 0.55);
+    color: var(--main-color);
     border-radius: 5px;
     margin-top: 10px;
+    transition: 0.5s;
+
+}
+
+#carousel .list .item .content button:hover,
+#carousel .list .item .content-2 button:hover{
+    background-color: rgba(78, 78, 78, 0.35);
 
 }
 
@@ -349,21 +365,21 @@ nav ul li a:hover::after{
 }
 
 .arrows button:hover{
-    background-color: #eee;
+    background-color: var(--main-color);
     color: #555;
     width: 45px;
     height: 45px;
 }
 
-.carousel .list .item:nth-child(1){
+#carousel .list .item:nth-child(1){
     z-index: 1;
 }
 
-.carousel .list .item:nth-child(1) .author,
-.carousel .list .item:nth-child(1) .title,
-.carousel .list .item:nth-child(1) .topic,
-.carousel .list .item:nth-child(1) .des,
-.carousel .list .item:nth-child(1) .buttons{
+#carousel .list .item:nth-child(1) .author,
+#carousel .list .item:nth-child(1) .title,
+#carousel .list .item:nth-child(1) .topic,
+#carousel .list .item:nth-child(1) .des,
+#carousel .list .item:nth-child(1) .buttons{
     transform: translateY(500%);
     filter: blur(20px);
     opacity: 0;
@@ -380,27 +396,27 @@ nav ul li a:hover::after{
 
 }
 
-.carousel .list .item:nth-child(1) .author{
+#carousel .list .item:nth-child(1) .author{
     animation-delay: 0.1;
 }
 
-.carousel .list .item:nth-child(1) .title{
+#carousel .list .item:nth-child(1) .title{
     animation-delay: 0.2s;
 }
 
-.carousel .list .item:nth-child(1) .topic{
+#carousel .list .item:nth-child(1) .topic{
     animation-delay: 0.3s;
 }
 
-.carousel .list .item:nth-child(1) .des{
+#carousel .list .item:nth-child(1) .des{
     animation-delay: 0.4s;
 }
 
-.carousel .list .item:nth-child(1) .buttons{
+#carousel .list .item:nth-child(1) .buttons{
     animation-delay: 0.5s;
 }
 
-.carousel.next .list .item:nth-child(1) img{
+#carousel.next .list .item:nth-child(1) img{
     position: absolute;
     left: 100%;
     animation: showImage .4s ease-in-out 1 forwards;
@@ -415,7 +431,7 @@ nav ul li a:hover::after{
     }
 }
 
-.carousel .time{
+#carousel .time{
     position: absolute;
     z-index: 1000;
     width: 0%;
@@ -425,8 +441,8 @@ nav ul li a:hover::after{
     top: 0;
 }
 
-.carousel.next .time,
-.carousel.prev .time{
+#carousel.next .time,
+#carousel.prev .time{
     animation: runningTime 0.4s linear 1 forwards;
 }
 @keyframes runningTime{
@@ -437,11 +453,11 @@ nav ul li a:hover::after{
 
 /* prev click */
 
-.carousel.prev .list .item:nth-child(2){
+#carousel.prev .list .item:nth-child(2){
     z-index: 2;
 }
 
-.carousel.prev .list .item:nth-child(2) img{
+#carousel.prev .list .item:nth-child(2) img{
     animation: outFrame 0.4s ease-in-out 1 forwards;
     position: absolute;
     bottom: 0;
@@ -453,20 +469,20 @@ nav ul li a:hover::after{
     }
 }
 
-.carousel.next .arrows button,
-.carousel.prev .arrows button{
+#carousel.next .arrows button,
+#carousel.prev .arrows button{
     pointer-events: none;
 }
-.carousel.prev .list .item:nth-child(2) .content .author,
-.carousel.prev .list .item:nth-child(2) .content .title,
-.carousel.prev .list .item:nth-child(2) .content .topic,
-.carousel.prev .list .item:nth-child(2) .content .des,
-.carousel.prev .list .item:nth-child(2) .content .buttons,
-.carousel.prev .list .item:nth-child(2) .content-2 .author,
-.carousel.prev .list .item:nth-child(2) .content-2 .title,
-.carousel.prev .list .item:nth-child(2) .content-2 .topic,
-.carousel.prev .list .item:nth-child(2) .content-2 .des,
-.carousel.prev .list .item:nth-child(2) .content-2 .buttons
+#carousel.prev .list .item:nth-child(2) .content .author,
+#carousel.prev .list .item:nth-child(2) .content .title,
+#carousel.prev .list .item:nth-child(2) .content .topic,
+#carousel.prev .list .item:nth-child(2) .content .des,
+#carousel.prev .list .item:nth-child(2) .content .buttons,
+#carousel.prev .list .item:nth-child(2) .content-2 .author,
+#carousel.prev .list .item:nth-child(2) .content-2 .title,
+#carousel.prev .list .item:nth-child(2) .content-2 .topic,
+#carousel.prev .list .item:nth-child(2) .content-2 .des,
+#carousel.prev .list .item:nth-child(2) .content-2 .buttons
 {
     animation: contentOut 0.5s linear 1 forwards!important;
 }
@@ -488,7 +504,8 @@ nav .fa-solid{
     display: none;
 }
 
-.resume .subtitle{
+#resume .subtitle{
+    color: var(--main-color);    
     transform: translateX(42vw);
     margin-top: 50px;
     margin-bottom: 30px;
@@ -496,8 +513,8 @@ nav .fa-solid{
     animation: none;
 }
 
-.resume .subtitle:hover{
-    color: var(--main-color);    
+#resume .subtitle:hover{
+    color: var(--main-color-dark)
 }
 
 @media only screen and (max-width: 600px){
