@@ -310,9 +310,14 @@ nav ul li a:hover::after{
 #carousel .list .item .content .topic,
 #carousel .list .item .content-2 .topic{
     font-weight: bold;
-    font-size: 5em;
+    font-size: 2em;
     list-style: 1.3em;
     
+}
+
+#carousel .list .item .content .des,
+#carousel .list .item .content-2 .des{
+    font-size: 0.75em;    
 }
 
 #carousel .list .item .content .buttons,
